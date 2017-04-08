@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Segment, Grid } from 'semantic-ui-react';
+import { Segment, Grid, Advertisement } from 'semantic-ui-react';
+import architecture from './images/architecture.jpg';
 export default class Home extends Component {
   render() {
     const styles = {
@@ -24,19 +25,27 @@ export default class Home extends Component {
         fontSize: "1.5em",
         padding: "0.2em",
         marginTop: "1.5em",
-        color: "#c0c0c0"
+        color: "#fff"
       },
       info: {
         fontSize: "1.5em",
         lineHeight: "1.9em",
         color: "#888"
+      },
+      spanAll: {
+        width: "100%",
+        height: "424px",
+        background: "url(" + architecture + ")",
+        webkitBackgroundSize: "cover",
+        backgroundSize: "cover"
       }
     }
     return(
       <div>
-      <Segment style={styles.section}>
-        <Grid columns={3} divided>
-          <Grid.Row>
+      <Advertisement unit='billboard' style={styles.spanAll} />
+      <Segment>
+        <Grid columns={3}>
+          <Grid.Row style={styles.section}>
             <Grid.Column>
               <i className="fa fa-lock" />
               <br />
@@ -53,11 +62,7 @@ export default class Home extends Component {
               <h1>Chain of Trust</h1>
             </Grid.Column>
           </Grid.Row>
-        </Grid>
-      </Segment>
-      <Segment style={styles.info}>
-        <Grid columns={3} divided>
-          <Grid.Row>
+          <Grid.Row style={styles.info}>
             <Grid.Column>
               Have confidence that every transaction is anonymous but recorded immutably
             </Grid.Column>

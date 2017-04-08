@@ -25,7 +25,7 @@ export default class Header extends Component {
         fontSize: "1.5em",
         padding: "0.2em",
         marginTop: "1.5em",
-        color: "#c0c0c0"
+        color: "#000"
       },
       info: {
         fontSize: "1.5em",

@@ -1,7 +1,11 @@
 body {
   margin-top: 2%;
   font-family: "Open Sans", sans-serif;
-
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 label {
@@ -39,6 +43,9 @@ h3 {
 }
 .ui .checkbox label {
   width: 130px;
+}
+.fullWidth {
+  width: 100%;
 }
 .input {
   width: 100%
