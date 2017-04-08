@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <form onSubmit={handleSubmit}>
       <div>
-        <h1>MetaCoin</h1>
+        <h1>ioblock</h1>
         <h2>Example Truffle Dapp</h2>
         <h3>You have <span className="black">{balance} META</span></h3>
         <br />

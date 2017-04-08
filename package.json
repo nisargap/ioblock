@@ -55,6 +55,7 @@
     "redux": "^3.6.0",
     "redux-form": "^6.5.0",
     "redux-thunk": "^2.2.0",
+    "semantic-ui-react": "^0.67.2",
     "truffle-contract": "^1.1.10",
     "truffle-solidity-loader": "git://github.com/sogoiii/truffle-solidity-loader#update_truffle_3"
   },
