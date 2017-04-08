@@ -15,7 +15,7 @@ export default class SignIn extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     if(this.state.username === "admin" && this.state.password === "password") {
-      this.context.router.push("/dash");
+      this.context.router.push("/dash/");
     } else {
       this.setState({
         errorMsg: "Incorrect login credentials"

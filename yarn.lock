@@ -1078,9 +1078,9 @@ big.js@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.1.3.tgz#4cada2193652eb3ca9ec8e55c9015669c9806978"
 
-"bignumber.js@git+https://github.com/debris/bignumber.js#master", "bignumber.js@git+https://github.com/debris/bignumber.js.git#94d7146671b9719e00a09c29b01a691bc85048c2":
+"bignumber.js@git+https://github.com/debris/bignumber.js#master", "bignumber.js@git+https://github.com/debris/bignumber.js.git#94d7146671b9719e00a09c29b01a691bc85048c2", "bignumber.js@git+https://github.com/debris/bignumber.js.git#master", "bignumber.js@github:debris/bignumber.js#94d7146671b9719e00a09c29b01a691bc85048c2":
   version "2.0.7"
-  resolved "git+https://github.com/debris/bignumber.js#94d7146671b9719e00a09c29b01a691bc85048c2"
+  resolved "git+https://github.com/debris/bignumber.js.git#94d7146671b9719e00a09c29b01a691bc85048c2"
 
 bignumber.js@~3.0.0:
   version "3.0.1"
@@ -1097,6 +1097,24 @@ bindings@^1.2.1:
 bip66@^1.1.3:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/bip66/-/bip66-1.1.4.tgz#8a59f8ae16eccb94681c3c2a7b224774605aadfb"
+
+bitcore-lib@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/bitcore-lib/-/bitcore-lib-0.14.0.tgz#21cb2359fe7b997a3b7b773eb7d7275ae37d644e"
+  dependencies:
+    bn.js "=2.0.4"
+    bs58 "=2.0.0"
+    buffer-compare "=1.0.0"
+    elliptic "=3.0.3"
+    inherits "=2.0.1"
+    lodash "=3.10.1"
+
+bitcore-mnemonic@^1.2.2:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/bitcore-mnemonic/-/bitcore-mnemonic-1.2.3.tgz#007bf30a12dfa6c920cddc72f864c0bf2b272afa"
+  dependencies:
+    bitcore-lib "^0.14.0"
+    unorm "^1.3.3"
 
 bl@^1.0.0, bl@^1.1.2:
   version "1.2.0"
@@ -1122,9 +1140,13 @@ bluebird@^3.4.1, bluebird@^3.4.7:
   version "3.4.7"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
 
-bn.js@4.11.6, bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.11.3, bn.js@^4.4.0:
+bn.js@4.11.6, bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.11.3, bn.js@^4.4.0, bn.js@^4.8.0:
   version "4.11.6"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.6.tgz#53344adb14617a13f6e8dd2ce28905d1c0ba3215"
+
+bn.js@=2.0.4, bn.js@^2.0.0, bn.js@^2.0.3:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-2.0.4.tgz#220a7cd677f7f1bfa93627ff4193776fe7819480"
 
 bn.js@^1.0.0:
   version "1.3.0"
@@ -1277,6 +1299,10 @@ browserslist@^1.0.1, browserslist@^1.4.0, browserslist@^1.5.2, browserslist@^1.7
     caniuse-db "^1.0.30000624"
     electron-to-chromium "^1.2.3"
 
+bs58@=2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/bs58/-/bs58-2.0.0.tgz#72b713bed223a0ac518bbda0e3ce3f4817f39eb5"
+
 bs58@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/bs58/-/bs58-3.1.0.tgz#d4c26388bf4804cac714141b1945aa47e5eb248e"
@@ -1295,6 +1321,10 @@ bser@1.0.2:
   dependencies:
     node-int64 "^0.4.0"
 
+buffer-compare@=1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/buffer-compare/-/buffer-compare-1.0.0.tgz#acaa7a966e98eee9fae14b31c39a5f158fb3c4a2"
+
 buffer-equal@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/buffer-equal/-/buffer-equal-0.0.1.tgz#91bc74b11ea405bc916bc6aa908faafa5b4aac4b"
@@ -1311,7 +1341,7 @@ buffer-xor@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/buffer-xor/-/buffer-xor-1.0.3.tgz#26e61ed1422fb70dd42e6e36729ed51d855fe8d9"
 
-buffer@^4.3.0:
+buffer@^4.3.0, buffer@^4.9.0:
   version "4.9.1"
   resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.1.tgz#6d1bb601b07a4efced97094132093027c95bc298"
   dependencies:
@@ -1863,7 +1893,7 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
 
-crypto-js@^3.1.4:
+crypto-js@^3.1.4, crypto-js@^3.1.5:
   version "3.1.8"
   resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-3.1.8.tgz#715f070bf6014f2ae992a98b3929258b713f08d5"
 
@@ -2237,6 +2267,24 @@ electron-to-chromium@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.2.3.tgz#4b4d04d237c301f72e2d15c2137b2b79f9f5ab76"
 
+elliptic@=3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-3.0.3.tgz#865c9b420bfbe55006b9f969f97a0d2c44966595"
+  dependencies:
+    bn.js "^2.0.0"
+    brorand "^1.0.1"
+    hash.js "^1.0.0"
+    inherits "^2.0.1"
+
+elliptic@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-3.1.0.tgz#c21682ef762769b56a74201609105da11d5f60cc"
+  dependencies:
+    bn.js "^2.0.3"
+    brorand "^1.0.1"
+    hash.js "^1.0.0"
+    inherits "^2.0.1"
+
 elliptic@^6.0.0, elliptic@^6.2.3:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.4.0.tgz#cac9af8762c85836187003c8dfe193e5e2eae5df"
@@ -2608,6 +2656,45 @@ etag@~1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.7.0.tgz#03d30b5f67dd6e632d2945d30d6652731a34d5d8"
 
+eth-lightwallet@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/eth-lightwallet/-/eth-lightwallet-2.5.4.tgz#a2eddaffed9d45b78175afedaac01e167730bb53"
+  dependencies:
+    bignumber.js debris/bignumber.js#94d7146671b9719e00a09c29b01a691bc85048c2
+    bitcore-lib "^0.14.0"
+    bitcore-mnemonic "^1.2.2"
+    buffer "^4.9.0"
+    crypto-js "^3.1.5"
+    elliptic "^3.1.0"
+    ethereumjs-tx "^1.1.1"
+    ethereumjs-util "^5.1.1"
+    rlp "^2.0.0"
+    scrypt-async "^1.2.0"
+    tweetnacl "0.13.2"
+    web3 "^0.15.3"
+
+ethereum-common@^0.0.18:
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/ethereum-common/-/ethereum-common-0.0.18.tgz#2fdc3576f232903358976eb39da783213ff9523f"
+
+ethereumjs-tx@^1.1.1:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/ethereumjs-tx/-/ethereumjs-tx-1.2.5.tgz#ed36d7ffeb97bc889c61eef1ab76f47a613d8286"
+  dependencies:
+    ethereum-common "^0.0.18"
+    ethereumjs-util "^5.0.0"
+
+ethereumjs-util@^5.0.0, ethereumjs-util@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/ethereumjs-util/-/ethereumjs-util-5.1.1.tgz#122fb38dea747dc62b3aebfc365d1bd48be4b73e"
+  dependencies:
+    bn.js "^4.8.0"
+    create-hash "^1.1.2"
+    ethjs-util "^0.1.3"
+    keccak "^1.0.2"
+    rlp "^2.0.0"
+    secp256k1 "^3.0.1"
+
 ethjs-abi@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/ethjs-abi/-/ethjs-abi-0.1.8.tgz#cd288583ed628cdfadaf8adefa3ba1dbcbca6c18"
@@ -2615,6 +2702,13 @@ ethjs-abi@^0.1.8:
     bn.js "4.11.6"
     js-sha3 "0.5.5"
     number-to-bn "1.7.0"
+
+ethjs-util@^0.1.3:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/ethjs-util/-/ethjs-util-0.1.4.tgz#1c8b6879257444ef4d3f3fbbac2ded12cd997d93"
+  dependencies:
+    is-hex-prefixed "1.0.0"
+    strip-hex-prefix "1.0.0"
 
 ethpm-registry@0.0.9:
   version "0.0.9"
@@ -3493,7 +3587,7 @@ inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.0, i
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
-inherits@2.0.1:
+inherits@2.0.1, inherits@=2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.1.tgz#b17d08d326b4423e568eff719f91b0b1cbdf69f1"
 
@@ -4459,6 +4553,15 @@ jsx-ast-utils@^1.0.0, jsx-ast-utils@^1.3.1:
   dependencies:
     object-assign "^4.1.0"
 
+keccak@^1.0.2:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/keccak/-/keccak-1.2.0.tgz#b53618fc7961b642f6e73f1546eec3329f7effe0"
+  dependencies:
+    bindings "^1.2.1"
+    inherits "^2.0.3"
+    nan "^2.2.1"
+    prebuild-install "^2.0.0"
+
 keypair@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/keypair/-/keypair-1.0.1.tgz#7603719270afb6564ed38a22087a06fc9aa4ea1b"
@@ -4909,6 +5012,10 @@ lodash.uniqby@^4.7.0:
 lodash.values@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.values/-/lodash.values-4.3.0.tgz#a3a6c2b0ebecc5c2cba1c17e6e620fe81b53d347"
+
+lodash@=3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
 "lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.11.1, lodash@^4.11.2, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.1, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.1:
   version "4.17.4"
@@ -6834,6 +6941,10 @@ ripemd160@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-1.0.1.tgz#93a4bbd4942bc574b69a8fa57c71de10ecca7d6e"
 
+rlp@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/rlp/-/rlp-2.0.0.tgz#9db384ff4b89a8f61563d92395d8625b18f3afb0"
+
 rsa-pem-to-jwk@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/rsa-pem-to-jwk/-/rsa-pem-to-jwk-1.1.3.tgz#245e76bdb7e7234cfee7ca032d31b54c38fab98e"
@@ -6888,7 +6999,11 @@ sax@^1.2.1, sax@~1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"
 
-secp256k1@^3.2.5:
+scrypt-async@^1.2.0:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/scrypt-async/-/scrypt-async-1.3.1.tgz#a11fd6fac981b4b823ee01dee0221169500ddae9"
+
+secp256k1@^3.0.1, secp256k1@^3.2.5:
   version "3.2.5"
   resolved "https://registry.yarnpkg.com/secp256k1/-/secp256k1-3.2.5.tgz#0dde5b27e5021665f6dffca7b2c3e010c6c13c93"
   dependencies:
@@ -7862,6 +7977,10 @@ tunnel@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/tunnel/-/tunnel-0.0.2.tgz#f23bcd8b7a7b8a864261b2084f66f93193396334"
 
+tweetnacl@0.13.2:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.13.2.tgz#453161770469d45cd266c36404e2bc99a8fa9944"
+
 tweetnacl@^0.14.3, tweetnacl@^0.14.5, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
@@ -7939,6 +8058,10 @@ uniqid@^4.0.0:
 uniqs@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/uniqs/-/uniqs-2.0.0.tgz#ffede4b36b25290696e6e165d4a59edb998e6b02"
+
+unorm@^1.3.3:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/unorm/-/unorm-1.4.1.tgz#364200d5f13646ca8bcd44490271335614792300"
 
 unpipe@~1.0.0:
   version "1.0.0"
@@ -8132,6 +8255,15 @@ web3@0.18.0, web3@^0.18.0:
     crypto-js "^3.1.4"
     utf8 "^2.1.1"
     xhr2 "*"
+    xmlhttprequest "*"
+
+web3@^0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/web3/-/web3-0.15.3.tgz#f997ccda419fc528c0d6c5d8d5382212bfa74628"
+  dependencies:
+    bignumber.js "git+https://github.com/debris/bignumber.js#master"
+    crypto-js "^3.1.4"
+    utf8 "^2.1.1"
     xmlhttprequest "*"
 
 web3@^0.16.0:

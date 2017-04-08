@@ -17,9 +17,9 @@ export default class Home extends Component {
         width: "30%"
       },
       section: {
-        fontSize: "6em",
-        padding: "0.4em",
-        color: "#000080"
+        fontSize: "10em",
+        color: "#000080",
+        marginTop: "0.25em"
       },
       tagline: {
         fontSize: "1.5em",
@@ -28,9 +28,10 @@ export default class Home extends Component {
         color: "#fff"
       },
       info: {
-        fontSize: "1.5em",
+        fontSize: "1.9em",
         lineHeight: "1.9em",
-        color: "#888"
+        color: "#000",
+        marginTop: "1.5em"
       },
       spanAll: {
         width: "100%",
@@ -38,43 +39,45 @@ export default class Home extends Component {
         background: "url(" + architecture + ")",
         webkitBackgroundSize: "cover",
         backgroundSize: "cover"
+      },
+      transparentBg: {
+        background: "rgba(255,255,255,0.8)"
       }
     }
     return(
-      <div>
-      <Advertisement unit='billboard' style={styles.spanAll} />
-      <Segment>
-        <Grid columns={3}>
-          <Grid.Row style={styles.section}>
-            <Grid.Column>
+      <div style={styles.transparentBg}>
+        <Grid columns={2} className="row-styles">
+          <Grid.Row className="row-styles">
+            <Grid.Column style={styles.section}>
               <i className="fa fa-lock" />
               <br />
               <h1>Security</h1>
             </Grid.Column>
-            <Grid.Column>
-              <i className="fa fa-credit-card" />
-                <br />
-                <h1>Transactions</h1>
+            <Grid.Column style={styles.info}>
+              Have confidence that every transaction is anonymous but recorded immutably
             </Grid.Column>
-            <Grid.Column>
+          </Grid.Row>
+          <Grid.Row className="row-styles">
+            <Grid.Column style={styles.info}>
+              Set up payments for shared contracts, and housing arrangements
+            </Grid.Column>
+            <Grid.Column style={styles.section}>
+              <i className="fa fa-credit-card" />
+              <br />
+              <h1>Transactions</h1>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row className="row-styles">
+            <Grid.Column style={styles.section}>
               <i className="fa fa-link" />
               <br />
               <h1>Chain of Trust</h1>
             </Grid.Column>
-          </Grid.Row>
-          <Grid.Row style={styles.info}>
-            <Grid.Column>
-              Have confidence that every transaction is anonymous but recorded immutably
-            </Grid.Column>
-            <Grid.Column>
-              Set up payments for shared contracts, and housing arrangements
-            </Grid.Column>
-            <Grid.Column>
+            <Grid.Column style={styles.info}>
               Establish a chain of trust for all parties involved regarding future payments
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </Segment>
       </div>
     )
   }

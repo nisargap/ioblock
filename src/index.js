@@ -17,6 +17,8 @@ import Home from './pages/Home/';
 import SignUp from './pages/SignUp/';
 import SignIn from './pages/SignIn/';
 import Dashboard from './pages/Dashboard/';
+import Settings from './pages/Settings/';
+import TestCreateAgreement from './pages/TestCreateAgreement/';
 
 const store = Store();
 Metacoin.then((metacoin) =>
@@ -38,9 +40,11 @@ window.addEventListener('load', function() {
           <IndexRoute component={Home} />
           <Route path="/signup" component={SignUp} />
           <Route path="/signin" component={SignIn} />
+          <Route path="/testcreate" component={TestCreateAgreement} />
         </Route>
-        <Route path="/dash" component={DashHeader} >
+        <Route path="/dash/" component={DashHeader} >
           <IndexRoute component={Dashboard} />
+          <Route path="settings" component={Settings} />
         </Route>
       </Router>
     </Provider>,

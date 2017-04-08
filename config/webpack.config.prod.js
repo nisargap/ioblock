@@ -84,7 +84,7 @@ module.exports = {
       'react-native': 'react-native-web'
     }
   },
-  
+
   module: {
     rules: [
       // Disable require.ensure as it's not a standard language feature.
@@ -95,7 +95,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         enforce: 'pre',
         use: [{
-          
+
           loader: 'eslint-loader'
         }],
         include: paths.appSrc
@@ -128,7 +128,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         include: paths.appSrc,
         loader: 'babel-loader',
-        
+
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.

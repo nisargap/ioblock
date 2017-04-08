@@ -52,15 +52,20 @@ export default class HomeMenu extends Component {
        </Menu>
        ) : (
          <Menu  style={styles.menuStyle} pointing secondary>
-         <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
-           <i className="fa fa-sign-out" />&nbsp;Log Out
+         <Menu.Item name="dash/" active={activeItem === 'dash/'} onClick={this.handleItemClick}>
+           <i className="fa fa-tachometer" />&nbsp;Dashboard
          </Menu.Item>
-         <Menu.Item name='settings' active={activeItem === 'settings'} onClick={this.handleItemClick}>
+         <Menu.Item name='dash/settings' active={activeItem === 'dash/settings'} onClick={this.handleItemClick}>
            <i className="fa fa-cog" />&nbsp;Settings
          </Menu.Item>
          <Menu.Item name='profile' active={activeItem === 'profile'} onClick={this.handleItemClick}>
            <i className="fa fa-user" />&nbsp;Profile
          </Menu.Item>
+         <Menu.Menu position='right'>
+           <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
+             <i className="fa fa-sign-out" />&nbsp;Log Out
+           </Menu.Item>
+         </Menu.Menu>
         </Menu>
        ) }
        <br />

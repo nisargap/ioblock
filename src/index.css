@@ -1,6 +1,5 @@
 body {
   margin-top: 2%;
-  font-family: "Open Sans", sans-serif;
   background: url(images/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -27,13 +26,9 @@ button {
 h1, h2 {
   display: inline-block;
   vertical-align: middle;
+  text-align: left;
   margin-top: 0px;
   margin-bottom: 10px;
-}
-
-h2 {
-  color: #AAA;
-  font-size: 32px;
 }
 
 h3 {
@@ -50,7 +45,10 @@ h3 {
 .input {
   width: 100%
 }
-
+.row-styles {
+  padding: 0;
+  margin: 0;
+}
 .black {
   color: black;
 }
@@ -61,6 +59,6 @@ h3 {
 .container {
   padding: 0.5em;
   margin: 0 auto;
-  width: 90%;
+  width: 960px;
   text-align: center;
 }
