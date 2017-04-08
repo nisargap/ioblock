@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TransactionsContainer from './containers/TransactionsContainer.js';
 import { Field, reduxForm } from 'redux-form';
-
+import Menu from './components/Menu';
 class App extends Component {
   render() {
     const {
@@ -14,6 +14,7 @@ class App extends Component {
       <div>
         <h1>ioblock</h1>
         <h2>Example Truffle Dapp</h2>
+        <Menu />
         <h3>You have <span className="black">{balance} META</span></h3>
         <br />
         <h1>Send</h1>

@@ -1,0 +1,17 @@
+{
+  "name": "truffle-react-redux-starter-kit",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Nisarga Patel <np8@umbc.edu>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nisargap/ioblock",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
