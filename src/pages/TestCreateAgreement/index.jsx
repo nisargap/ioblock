@@ -50,6 +50,8 @@ class TestCreateAgreement extends Component {
           <input type="number" onChange={(e) => { this.amtChange(e.target.value, 0); }} placeholder="Amount 1 e.g. 0x....." /><br />
           <input type="number" onChange={(e) => { this.amtChange(e.target.value, 1); }} placeholder="Amount 2 e.g. 0x....." /><br />
           <input type="number" onChange={(e) => { this.amtChange(e.target.value, 2); }} placeholder="Amount 3 e.g. 0x....." /><br />
+          <input type="number" onChange={(e) => { this.amtChange(e.target.value, 3); }} placeholder="Amount 4 e.g. 0x....." /><br />
+
           <input type="submit" value="Create Agreement" />
         </form>
       </div>

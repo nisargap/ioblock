@@ -30,7 +30,7 @@ contract MetaCoin {
 
 	function MetaCoin(){
 		owner = msg.sender;
-		lastContract = 1;
+		lastContract = 5;
 	}
 
 	function isFulfilled(uint agreementId) private constant returns (bool) {

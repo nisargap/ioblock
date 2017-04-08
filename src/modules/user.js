@@ -26,7 +26,7 @@ export default function reducer(state = {
     case "NEW_AGREEMENT":
       return {
         ...state,
-        agreements: [...this.state.agreements, action.payload]
+        agreements: [...state.agreements, action.payload]
       }
     default: return state;
   }
