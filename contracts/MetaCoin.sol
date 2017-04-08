@@ -40,8 +40,13 @@ contract MetaCoin {
 		}
 	}
 
-//get all values related to an agreeme
-//Return Format: Exists, Reciever, debtors[], amountOwedPerDebtor[], amountPaidPerDebtor[], verifiedPaidPerDebtor[]
+	//returns id of lastContract inserted
+	function getLastAgreement() constant returns (uint){
+		return lastContract;
+	}
+
+	//get all values related to an agreeme
+	//Return Format: Exists, Reciever, debtors[], amountOwedPerDebtor[], amountPaidPerDebtor[], verifiedPaidPerDebtor[]
 	function getAgreement(uint agreementId) constant returns (bool, address, address[], uint[], uint[], bool[]){
 		agreement a = agreements[1];
 		uint[] memory owed;
@@ -106,7 +111,6 @@ contract MetaCoin {
 			agreements[lastContract].obligations[sender].verified = false;
 			agreements[lastContract].obligations[sender].owed = amount;
 		}
-
 		lastContract = lastContract + 1;
 		return (true, lastContract - 1);
 
