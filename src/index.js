@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppContainer from './containers/AppContainer';
 import '../bower_components/semantic/dist/semantic.min.css';
 import '../bower_components/font-awesome/css/font-awesome.min.css';
 import Store from './store';
@@ -17,8 +16,10 @@ import Home from './pages/Home/';
 import SignUp from './pages/SignUp/';
 import SignIn from './pages/SignIn/';
 import Dashboard from './pages/Dashboard/';
-import Settings from './pages/Settings/';
-import TestCreateAgreement from './pages/TestCreateAgreement/';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+injectTapEventPlugin();
 
 const store = Store();
 Metacoin.then((metacoin) =>
@@ -34,20 +35,20 @@ store.dispatch(metaCoinActions.fetchBalance(web3.eth.accounts[0]));
 
 window.addEventListener('load', function() {
   ReactDOM.render(
+    <MuiThemeProvider>
     <Provider store={store}>
       <Router history={browserHistory}>
         <Route path="/" component={Header}>
           <IndexRoute component={Home} />
           <Route path="/signup" component={SignUp} />
           <Route path="/signin" component={SignIn} />
-          <Route path="/testcreate" component={TestCreateAgreement} />
         </Route>
         <Route path="/dash/" component={DashHeader} >
           <IndexRoute component={Dashboard} />
-          <Route path="settings" component={Settings} />
         </Route>
       </Router>
-    </Provider>,
+    </Provider>
+    </MuiThemeProvider>,
     document.getElementById('root')
   );
 });

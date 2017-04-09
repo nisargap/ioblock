@@ -1,24 +1,48 @@
 import React, { Component } from "react";
-import { Input, Segment, Button } from "semantic-ui-react";
+import TextField from 'material-ui/TextField';
+import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
+import Divider from 'material-ui/Divider';
 export default class SignUp extends Component {
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+  }
   render() {
     const styles = {
       signupbox: {
         width: "50%",
-        margin: "0 auto"
-      }
+        padding: "2em",
+        margin: "5% auto"
+      },
     }
     return(
-      <Segment style={styles.signupbox}>
+      <Paper style={styles.signupbox}>
         <h1>Sign Up</h1>
-        <form>
-          <Input className="input" placeholder="username" /><br /><br />
-          <Input className="input" placeholder="password" /><br /><br />
-          <Input className="input" placeholder="password again" /><br /><br />
-          <Input className="input" placeholder="phone number" /><br /><br />
-          <Button primary>Sign Up</Button><br />
+        <Divider />
+        <form onSubmit={this.handleSubmit}>
+          <TextField
+            fullWidth={true}
+            type="text"
+            hintText="Username"
+            floatingLabelText="Username"
+          /><br />
+          <TextField
+            fullWidth={true}
+            type="password"
+            hintText="Password"
+            floatingLabelText="Password"
+          />
+          <TextField
+            fullWidth={true}
+            type="password"
+            hintText="Password Confirm"
+            floatingLabelText="Password Confirm"
+          />
+        <br />
+        <RaisedButton type="submit" className="button-submit" label="Sign Up" primary={true} />
         </form>
-      </Segment>
+      </Paper>
     )
   }
 }

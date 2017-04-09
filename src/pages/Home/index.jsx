@@ -1,85 +1,59 @@
 import React, { Component } from 'react';
-import { Segment, Grid, Advertisement } from 'semantic-ui-react';
-import architecture from './images/architecture.jpg';
+import Paper from 'material-ui/Paper';
+import Divider from 'material-ui/Divider';
+import logo from './images/ioblock.png';
 export default class Home extends Component {
   render() {
     const styles = {
-      img: {
-        width: "5em",
+      logo: {
+        width: "100px",
+        display: "block",
+        textAlign: "center",
+        margin: "auto"
+      },
+      container: {
+        marginTop: 0,
+        width: "100%",
         margin: "0 auto"
       },
-      logoheader: {
-        fontSize: "5em",
-        fontWeight: "light"
-      },
-      chain: {
-        margin: "0 auto",
-        width: "30%"
-      },
-      section: {
-        fontSize: "10em",
-        color: "#000080",
-        marginTop: "0.25em"
-      },
-      tagline: {
-        fontSize: "1.5em",
-        padding: "0.2em",
-        marginTop: "1.5em",
-        color: "#fff"
-      },
-      info: {
-        fontSize: "1.9em",
-        lineHeight: "1.9em",
-        color: "#000",
-        padding: "0.5em",
-        marginTop: "1.5em"
-      },
-      spanAll: {
+      firstSection: {
+        marginTop: 0,
+        background: "#f0f0f0",
+        padding: "5%",
         width: "100%",
-        height: "424px",
-        background: "url(" + architecture + ")",
-        webkitBackgroundSize: "cover",
-        backgroundSize: "cover"
+        textAlign: "center",
+        border: "0px solid black"
       },
-      transparentBg: {
-        background: "rgba(255,255,255,0.8)",
-        padding: "1.8em"
+      secondSection: {
+        padding: "5%"
+      },
+      paperInner: {
+        padding: "1.5em",
+        fontSize: "1.7em"
       }
     }
     return(
-      <div style={styles.transparentBg}>
-        <Grid columns={2} className="row-styles">
-          <Grid.Row className="row-styles">
-            <Grid.Column style={styles.section}>
-              <i className="fa fa-lock" />
-              <br />
-              <h1>Security</h1>
-            </Grid.Column>
-            <Grid.Column style={styles.info}>
-              Have confidence that every transaction is anonymous but recorded immutably
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row className="row-styles">
-            <Grid.Column style={styles.info}>
-              Set up payments for shared contracts, and housing arrangements
-            </Grid.Column>
-            <Grid.Column style={styles.section}>
-              <i className="fa fa-credit-card" />
-              <br />
-              <h1>Transactions</h1>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row className="row-styles">
-            <Grid.Column style={styles.section}>
-              <i className="fa fa-link" />
-              <br />
-              <h1>Chain of Trust</h1>
-            </Grid.Column>
-            <Grid.Column style={styles.info}>
-              Establish a chain of trust for all parties involved regarding future payments
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+      <div>
+        <article style={styles.container}>
+        <section style={styles.firstSection} id="top">
+          <br /><br /><br />
+          <img src={logo} style={styles.logo} role="presentation" />
+          <br />
+          <h1>Make and verify shared transactions</h1>
+          <br />
+        </section>
+        <section style={styles.secondSection} id="middle">
+          <Paper style={styles.paperInner}>
+            <h1>About</h1>
+            <Divider />
+            <br />
+            <p>IO Block is a service which provides a safe, reliable, and trustworthy channel for shared transactions such as those for real estate or housing situations.</p>
+          </Paper>
+        </section>
+        <section id="bottom">
+
+        </section>
+        </article>
       </div>
     )
   }

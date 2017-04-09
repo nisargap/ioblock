@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { Input, Segment, Button, Checkbox, Message } from "semantic-ui-react";
+import TextField from 'material-ui/TextField';
+import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
+import Divider from 'material-ui/Divider';
 export default class SignIn extends Component {
   static contextTypes = {
     router: React.PropTypes.object
@@ -36,7 +39,8 @@ export default class SignIn extends Component {
     const styles = {
       signupbox: {
         width: "50%",
-        margin: "0 auto"
+        padding: "2em",
+        margin: "5% auto"
       },
       remember: {
         margin: 0,
@@ -45,16 +49,28 @@ export default class SignIn extends Component {
       }
     }
     return(
-      <Segment style={styles.signupbox}>
+      <Paper style={styles.signupbox}>
         <h1>Sign In</h1>
+        <Divider />
         <form onSubmit={this.handleSubmit}>
-          <Input type="text" className="input" placeholder="username" onChange={this.handleUsernameChange} /><br /><br />
-          <Input type="password" className="input" placeholder="password" onChange={this.handlePasswordChange} /><br /><br />
-          <Checkbox style={styles.remember} label="Remember Me" /><br /><br />
-          <Button primary>Sign In</Button><br />
+          <TextField
+            onChange={this.handleUsernameChange}
+            fullWidth={true}
+            hintText="Username"
+            floatingLabelText="Username"
+          /><br />
+          <TextField
+            onChange={this.handlePasswordChange}
+            fullWidth={true}
+            type="password"
+            hintText="Password"
+            floatingLabelText="Password"
+          />
+        <br />
+        <RaisedButton type="submit" className="button-submit" onTouchTap={this.handleSubmit} label="Sign In" primary={true} />
         </form>
-        {this.state.errorMsg === "" ? "" : (<Message color="red">{this.state.errorMsg}</Message>) }
-      </Segment>
+        {this.state.errorMsg === "" ? "" : <h4>{this.state.errorMsg}</h4> }
+      </Paper>
     )
   }
 }

@@ -29,9 +29,7 @@ export function createAgreement(receiverAddr, sendersAddrs, amounts) {
     MetaCoin.then((metacoin) => {
       metacoin.addAgreement(receiverAddr, sendersAddrs, amounts, { from: web3.eth.accounts[0], gas: 770960}).then((response) => {
 
-        console.log(response);
-        dispatch({type: "NEW_AGREEMENT", payload: response[1]});
-
+        dispatch({type: "NEW_AGREEMENT", payload: response});
 
       })
     })
