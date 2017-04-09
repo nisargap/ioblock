@@ -20,6 +20,11 @@ module.exports = {
       port: 8546,
       network_id: 1337
     },
+    production: {
+      host: "104.236.205.19",
+      port: 8545,
+      network_id: "*"
+    },
     ropsten: {
       host: "158.253.8.12",
       port: 8545,

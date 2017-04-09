@@ -15,8 +15,13 @@ module.exports = {
       port: 8545,
       network_id: "*"
     },
+    production: {
+      host: "104.236.205.19",
+      port: 8545,
+      network_id: "*"
+    },
     staging: {
-      host: "localhost",
+      host: "104.236.205.19",
       port: 8546,
       network_id: 1337
     },

@@ -186,7 +186,9 @@ module.exports = {
         test: /\.sol/,
         use: [
           { loader: 'json-loader' },
-          { loader: 'truffle-solidity-loader' },
+          { loader: 'truffle-solidity-loader', options: {
+            network: 'production'
+          } },
         ]
       }
       // ** STOP ** Are you adding a new loader?

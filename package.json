@@ -1,6 +1,7 @@
 {
   "name": "truffle-react-redux-starter-kit",
   "version": "0.1.0",
+  "homepage": "http://nisargap.github.io/ioblock",
   "private": true,
   "devDependencies": {
     "autoprefixer": "6.7.5",
@@ -65,7 +66,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
