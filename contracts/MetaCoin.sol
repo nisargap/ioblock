@@ -15,6 +15,11 @@ contract MetaCoin {
 	bool exists;
 	}
 
+  event newAgreement (
+    bool success,
+    uint lastAdded
+  );
+
 	struct agreement {
 	address receiver;
 	mapping (address => obligation) obligations;
@@ -30,7 +35,7 @@ contract MetaCoin {
 
 	function MetaCoin(){
 		owner = msg.sender;
-		lastContract = 5;
+    lastContract = 1;
 	}
 
 	function isFulfilled(uint agreementId) private constant returns (bool) {
@@ -112,6 +117,7 @@ contract MetaCoin {
 			agreements[lastContract].obligations[sender].owed = amount;
 		}
 		lastContract = lastContract + 1;
+    newAgreement(true, lastContract - 1);
 		return (true, lastContract - 1);
 
 	}

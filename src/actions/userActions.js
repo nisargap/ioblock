@@ -27,14 +27,11 @@ export function getAddress() {
 export function createAgreement(receiverAddr, sendersAddrs, amounts) {
   return function(dispatch) {
     MetaCoin.then((metacoin) => {
+      metacoin.addAgreement(receiverAddr, sendersAddrs, amounts, { from: web3.eth.accounts[0], gas: 770960}).then((response) => {
 
-      metacoin.addAgreement.call(receiverAddr, sendersAddrs, amounts).then((response) => {
         console.log(response);
-        console.log(response[1].toString());
-        metacoin.getLastAgreement().then((response) => {
-          console.log(response);
-          dispatch({type: "NEW_AGREEMENT", payload: response[1]});
-        })
+        dispatch({type: "NEW_AGREEMENT", payload: response[1]});
+
 
       })
     })
