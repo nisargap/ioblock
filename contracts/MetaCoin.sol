@@ -15,10 +15,10 @@ contract MetaCoin {
 	bool exists;
 	}
 
-  event newAgreement (
-    bool success,
-    uint lastAdded
-  );
+	event newAgreement (
+		bool success,
+		uint lastAdded
+	);
 
 	struct agreement {
 	address receiver;
@@ -35,7 +35,7 @@ contract MetaCoin {
 
 	function MetaCoin(){
 		owner = msg.sender;
-    lastContract = 1;
+		lastContract = 1;
 	}
 
 	function isFulfilled(uint agreementId) private constant returns (bool) {
@@ -77,13 +77,11 @@ contract MetaCoin {
 //checks if a user is part of an agreement and if they are pays their share
 //returns true if the command was successful, true if the obligation has been fufilledthen the total amount they've paid towards the obligation
 	function payObligation(uint agreementId, uint amount) returns (bool, bool, uint) {
-	//if user is in that contract
-		if (agreements[agreementId].obligations[msg.sender].exists){
-			agreements[agreementId].obligations[msg.sender].paid += amount;
-			if (isFulfilled(agreementId)){
-				return (true, true, agreements[agreementId].obligations[msg.sender].paid);
-			}
-			return (true, false, agreements[agreementId].obligations[msg.sender].paid);
+		//if user is in that contract
+		obligation sender = agreements[agreementId].obligations[msg.sender];
+		if (sender.exists){
+			sender.paid += amount;
+			return (true, isFulfilled(agreementId), sender.paid);
 		}
 		return (false, false, 0);
 	}
@@ -117,7 +115,7 @@ contract MetaCoin {
 			agreements[lastContract].obligations[sender].owed = amount;
 		}
 		lastContract = lastContract + 1;
-    newAgreement(true, lastContract - 1);
+		newAgreement(true, lastContract - 1);
 		return (true, lastContract - 1);
 
 	}
