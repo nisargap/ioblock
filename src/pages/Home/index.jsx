@@ -31,6 +31,7 @@ export default class Home extends Component {
         fontSize: "1.9em",
         lineHeight: "1.9em",
         color: "#000",
+        padding: "0.5em",
         marginTop: "1.5em"
       },
       spanAll: {
@@ -41,7 +42,8 @@ export default class Home extends Component {
         backgroundSize: "cover"
       },
       transparentBg: {
-        background: "rgba(255,255,255,0.8)"
+        background: "rgba(255,255,255,0.8)",
+        padding: "1.8em"
       }
     }
     return(
